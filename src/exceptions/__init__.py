@@ -1,0 +1,1 @@
+from src.exceptions.web3_exceptions import Web3ConnectionError

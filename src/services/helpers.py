@@ -3,11 +3,11 @@ from ast import literal_eval
 from hexbytes import HexBytes
 from web3 import Web3
 
-from src.abi import abi
+from src.consts import ABI
 
 
 def get_token_name_from_address(web3: Web3, token_address: str) -> str:
-    return web3.eth.contract(address=token_address, abi=abi).functions.name().call()
+    return web3.eth.contract(address=token_address, abi=ABI).functions.name().call()
 
 
 def get_amount_from_data_hex(data_hex: HexBytes) -> int:
